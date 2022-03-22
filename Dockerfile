@@ -21,7 +21,7 @@ RUN sed -i.bak -e \
    s%Options Indexes FollowSymLinks%Options Indexes FollowSymLinks ExecCGI%g;' \
    /usr/local/apache2/conf/httpd.conf
 
-ARG ZEROCHPLUS_VERSION=0.7.4
+ARG ZEROCHPLUS_VERSION=0.7.5
 
 RUN mkdir -p /tmp/zerochplus \
   && curl -L https://ja.osdn.net/dl/zerochplus/zerochplus_${ZEROCHPLUS_VERSION}.tar.gz -o /tmp/zerochplus/zerochplus_${ZEROCHPLUS_VERSION}.tar.gz \
