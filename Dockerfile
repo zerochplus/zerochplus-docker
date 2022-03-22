@@ -7,6 +7,8 @@ RUN apt-get update \
     perl \
     make \
     gcc \
+    libxml-parser-perl \
+    libc6-dev \
 	&& rm -rf /var/lib/apt/lists/*
 
 RUN curl -L http://cpanmin.us | perl - App::cpanminus \
