@@ -1,0 +1,139 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="ja">
+<head>
+ 
+ <meta http-equiv="Content-Type" content="text/html;charset=Shift_JIS">
+ <meta http-equiv="Content-Script-Type" content="text/javascript">
+ 
+
+ <title>サンプル板1</title>
+
+<script language="JavaScript" type="text/javascript">
+<!--
+function l(e) {
+	var N = getCookie("NAME"), M = getCookie("MAIL");
+	for (var i = 0, j = document.forms ; i < j.length ; i++){
+		if (j[i].FROM && j[i].mail) {
+			j[i].FROM.value = N;
+			j[i].mail.value = M;
+		}}
+}
+window.onload = l;
+function getCookie(key) {
+	var ptrn = '(?:^|;| )' + key + '="(.*?)"';
+	if (document.cookie.match(ptrn))
+		return decodeURIComponent(RegExp.$1);
+	return "";
+}
+//-->
+</script>
+</head>
+<!--nobanner-->
+<body bgcolor="#FFFFFF" text="#000000" link="#0000FF" alink="#FF0000" vlink="#AA0088" background="/example_1/ba.gif">
+<a name="top"></a>
+<div align="center"><a href="http://zerochplus.sourceforge.jp/"><img src="/example_1/kanban.gif" border="0" alt="http://zerochplus.sourceforge.jp/"></a></div>
+<a name="info"></a>
+<table border="1" cellspacing="7" cellpadding="3" width="95%" bgcolor="#CCFFCC" style="margin-bottom:1.2em;" align="center">
+ <tr>
+  <td>
+  <table border="0" width="100%">
+   <tr>
+    <td><font size="+1"><b>いろんな開発用。。。</b></font></td>
+    <td align="right"><a href="#menu">■</a> <a href="#1">▼</a></td>
+   </tr>
+   <tr>
+    <td colspan="2">
+    <div align="center" style="margin: 1.2em 0;">
+    <font color="red">クリックで救える命が…ないです(｀･ω･´)ｼｬｷｰﾝ</font>
+    </div>
+    
+    <b>掲示板使用上の注意</b>
+    <blockquote style="margin-top:0;font-weight:bold;">
+    ･転んでも泣かない<br>
+    ･出されたものは残さず食べる<br>
+    ･Perl使いを尊重する<br>
+    </blockquote>
+    </td>
+   </tr>
+  </table>
+  </td>
+ </tr>
+ <tr>
+  <td align="center"><a href="../" target="_blank"><small>■<b>掲示板一覧</b>■</small></a></td>
+ </tr>
+</table>
+
+<table border="1" cellspacing="7" cellpadding="3" width="95%" bgcolor="#ccffcc" align="center">
+<tr><td>なるほど告知欄じゃねーの</td></tr>
+</table>
+
+<a name="menu"></a>
+<table border="1" cellspacing="7" cellpadding="3" width="95%" bgcolor="#CCFFCC" style="margin:1.2em auto;" align="center">
+ <tr>
+  <td>
+  <small>
+  <a href="http://localhost:8080/test/read.cgi/example_1/1703863285/l50" target="body">1:</a> <a href="#1">テストテストテスト(1)</a>　
+  </small>
+  <div align="right"><small><b><a href="./subback.html">スレッド一覧はこちら</a></b></small></div>
+  </td>
+ </tr>
+</table>
+
+<table border="1" cellspacing="7" cellpadding="3" width="95%" bgcolor="#EFEFEF" style="margin-bottom:1.2em;" align="center">
+ <tr>
+  <td>
+  <a name="1"></a>
+  <div align="right"><a href="#menu">■</a><a href="#1">▲</a><a href="#1">▼</a></div>
+  <div style="font-weight:bold;margin-bottom:0.2em;">【1:1】<font size="+2" color="#FF0000">テストテストテスト</font></div>
+  <dl style="margin-top:0px;">
+   <dt>1 名前：<font color="green"><b>名無しさん＠ぜろちゃんねるプラス</b></font>：2023/12/30(土) 00:21:25 ID:MZZnqdaQ</dt>
+    <dd> 隣の客はよく柿食う客だ・・・ <br><br></dd>
+  </dl>
+  <form method="POST" action="http://localhost:8080/test/bbs.cgi?guid=ON">
+   <blockquote>
+   <input type="hidden" name="bbs" value="example_1">
+   <input type="hidden" name="key" value="1703863285">
+   <input type="hidden" name="time" value="1703863285">
+   <input type="submit" value="書き込む" name="submit"> 
+   名前：<input type="text" name="FROM" size="19">
+   E-mail：<input type="text" name="mail" size="19"><br>
+   <blockquote style="margin-top:0px;">
+    <textarea rows="5" cols="64" name="MESSAGE"></textarea>
+    <div style="font-weight:bold;">
+     <a href="http://localhost:8080/test/read.cgi/example_1/1703863285/">全部読む</a>
+     <a href="http://localhost:8080/test/read.cgi/example_1/1703863285/l50">最新50</a>
+     <a href="http://localhost:8080/test/read.cgi/example_1/1703863285/1-100">1-100</a>
+     <a href="#top">板のトップ</a>
+     <a href="./">リロード</a>
+    </div>
+    </blockquote>
+   </blockquote>
+  </form>
+  </td>
+ </tr>
+</table>
+
+<table border="1" cellspacing="7" cellpadding="3" width="95%" bgcolor="#CCFFCC" align="center">
+ <tr>
+  <td>
+  <form method="POST" action="/test/bbs.cgi?guid=ON" style="margin:1.2em 0;">
+  <input type="submit" value="新規スレッド作成画面へ"><br>
+  <input type="hidden" name="bbs" value="example_1">
+  <input type="hidden" name="time" value="1703863285">
+  </form>
+  </td>
+ </tr>
+</table>
+<div align="center" style="margin:1.2em;font-weight:bold;">
+どのような形の削除依頼であれ公開させていただきます (｀･ω･´)ｼｬｷｰﾝ
+</div>
+<div style="margin-top:1.2em;">
+<a href="http://zerochplus.sourceforge.jp/">ぜろちゃんねるプラス</a>
+BBS.CGI - 0ch+ BBS 0.7.5 20220323 (Perl)
++<a href="http://bbq.uso800.net/" target="_blank">BBQ</a>
+
++Samba24=0<br>
+ページのおしまいだよ。。と</div>
+
+</body>
+</html>

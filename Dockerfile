@@ -35,3 +35,6 @@ RUN mkdir -p /tmp/zerochplus \
   && chmod 705 test/datas test/module test/mordor test/plugin test/perllib \
   && find test/perllib -type d | xargs chmod 705 \
   && chmod 707 test/info test/info/.session test/plugin_conf
+
+# fixturesフォルダ以下のファイルを、htdocs以下に上書きコピーする
+COPY ./fixtures/ /usr/local/apache2/htdocs/
