@@ -21,12 +21,10 @@ RUN sed -i.bak -e \
    s%Options Indexes FollowSymLinks%Options Indexes FollowSymLinks ExecCGI%g;' \
    /usr/local/apache2/conf/httpd.conf
 
-ARG ZEROCHPLUS_VERSION=0.7.5
-
 RUN mkdir -p /tmp/zerochplus \
-  && curl -L https://ja.osdn.net/dl/zerochplus/zerochplus_${ZEROCHPLUS_VERSION}.tar.gz -o /tmp/zerochplus/zerochplus_${ZEROCHPLUS_VERSION}.tar.gz \
-  && tar xvzf /tmp/zerochplus/zerochplus_${ZEROCHPLUS_VERSION}.tar.gz -C /tmp/zerochplus \
-  && cp -R /tmp/zerochplus/zerochplus_${ZEROCHPLUS_VERSION}/test /usr/local/apache2/htdocs \
+  && curl -L https://github.com/zerochplus/zerochplus/releases/download/0.7.5-mirror/zerochplus_0.7.5.tar.gz -o /tmp/zerochplus/zerochplus_0.7.5.tar.gz \
+  && tar xvzf /tmp/zerochplus/zerochplus_0.7.5.tar.gz -C /tmp/zerochplus \
+  && cp -R /tmp/zerochplus/zerochplus_0.7.5/test /usr/local/apache2/htdocs \
   && rm -rf /tmp/zerochplus \
   && cd /usr/local/apache2/htdocs \
   && chmod 707 . \
